@@ -1,5 +1,3 @@
-// src/base/_lists.scss
-
 @use '../variables/sizing' as sizing;
 
 ul, ol {
@@ -10,7 +8,6 @@ ul, ol {
         margin-bottom: map-get(sizing.$spacers, 1);
         padding-left: map-get(sizing.$spacers, 1);
         
-        // Custom bullet for unordered list (Bonfire theme: a warm block)
         &::marker {
             color: var(--color-secondary);
         }

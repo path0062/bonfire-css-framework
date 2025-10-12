@@ -1,5 +1,3 @@
-// src/utilities/_spacing.scss
-
 @use '../variables/sizing' as sizing;
 
 $directions: (
@@ -15,7 +13,6 @@ $directions: (
 @each $prop-prefix, $prop-name in (m: margin, p: padding) {
     @each $dir-prefix, $dir-names in $directions {
         @each $size-key, $size-value in sizing.$spacers {
-            // Generate classes like .mt-3 (margin-top: 1rem) or .p-5 (padding: 3rem)
             .#{$prop-prefix}#{$dir-prefix}-#{$size-key} {
                 @if type-of($dir-names) == list {
                     @each $dir in $dir-names {

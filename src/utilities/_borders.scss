@@ -1,25 +1,19 @@
-// src/utilities/_borders.scss
-
 @use '../variables/theme' as theme;
 @use '../variables/sizing' as sizing;
 
-// Border Utility Classes
 .border { border: 1px solid var(--color-dark) !important; }
 .border-0 { border: 0 !important; }
 
-// Border Color Utilities (Uses the theme map)
 @each $name, $color in theme.$theme {
     .border-#{$name} {
         border-color: #{$color} !important;
     }
 }
 
-// Border Radius Utilities
 .rounded { border-radius: sizing.$border-radius-base !important; }
 .rounded-lg { border-radius: sizing.$border-radius-lg !important; }
 .rounded-circle { border-radius: sizing.$border-radius-round !important; }
 
-// Image-specific utility classes (from professor's video)
 .img-thumbnail {
     padding: sizing.$border-radius-base;
     border: 1px solid var(--color-dark);
@@ -28,7 +22,7 @@
 
 .img-avatar, .img-round {
     @extend .rounded-circle;
-    object-fit: cover; // Ensures image doesn't distort
+    object-fit: cover;  
     width: 300px;
     height: 300px;
 }
