@@ -1,0 +1,53 @@
+@use '../variables/theme' as theme; 
+@use '../variables/sizing' as sizing;
+
+body {
+    font-family: var(--font-family-body); 
+    line-height: 1.6;
+    background-color: var(--color-light); 
+    color: var(--color-dark);
+    padding: 1rem; 
+}
+
+.container {
+    max-width: var(--container-max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding: map-get(sizing.$spacers, 3);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-dark);
+    margin-top: map-get(sizing.$spacers, 4);
+    margin-bottom: map-get(sizing.$spacers, 2);
+    line-height: 1.2;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+a {
+    color: var(--color-primary); 
+    text-decoration: none;
+    transition: color 0.2s, text-decoration 0.2s;
+
+    &:hover {
+        color: var(--color-danger);
+        text-decoration: underline; 
+    }
+}
+
+p {
+    margin-bottom: map-get(sizing.$spacers, 3);
+}
+
+img {
+    display: block;
+    height: auto;
+}

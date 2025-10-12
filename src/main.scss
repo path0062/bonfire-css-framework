@@ -1,0 +1,20 @@
+// src/main.scss
+
+// 1. Base files (Reset, Fonts, Core Styles)
+@use './base/reset';
+@use './base/merriweather'; // Import external font files
+@use './base/base';
+@use './base/lists';
+
+// 2. Variables (Contains Utility Class generation)
+@use './variables/index' as variables;
+
+// 3. Components (HTML Element Theming)
+@use './components/buttons';
+@use './components/forms';
+@use './components/tables';
+
+// 4. Utilities (Load last to ensure high specificity via !important)
+@use './utilities/spacing';
+@use './utilities/borders';
+@use './utilities/fonts';

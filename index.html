@@ -1,0 +1,173 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bonfire.css" />
+    <title>Bonfire CSS Framework Demo</title>
+</head>
+<body>
+    
+    <div class="container">
+
+        <h1>Heading 1 (H1)</h1>
+        <h2>Heading 2 (H2)</h2>
+        <h3>Heading 3 (H3)</h3>
+        <h4>Heading 4 (H4)</h4>
+        <h5>Heading 5 (H5)</h5>
+        <h6>Heading 6 (H6)</h6>
+
+        <p>This is a standard paragraph styled by the base theme. The typography uses the Merriweather font imported in thisframework.</p>
+        <p>This is a standard paragraph styled by the base theme. The typography uses the Merriweather font imported in thisframework.</p>
+        <p>This is a standard paragraph styled by the base theme. The typography uses the Merriweather font imported in thisframework.</p>
+        <p>This is a standard paragraph styled by the base theme. The typography uses the Merriweather font imported in this framework.</p>
+
+        <section class="mb-5">
+            <h2>Section Heading</h2>
+            <p>This paragraph is within a section, demonstrating how the base styles remain consistent regardless of the parent element.</p>
+            <p>This is a standard paragraph styled by the base theme. The typography uses the Merriweather font imported in this framework.</p>
+        </section>
+
+        <section class="mb-5">
+            <h2>Lists</h2>
+            <h5>Unordered List (UL)</h5>
+            <ul>
+                <li>List Item 1</li>
+                <li>List Item 2</li>
+                <li>List Item 3</li>
+                <li>List Item 4</li>
+                <li>List Item 5</li>
+            </ul>
+
+            <h5>Ordered List (OL)</h5>
+            <ol>
+                <li>List Item 1</li>
+                <li>List Item 2</li>
+                <li>List Item 3</li>
+                <li>List Item 4</li>
+                <li>List Item 5</li>
+            </ol>
+        </section>
+        
+        <section class="mb-5">
+            <h2>Buttons</h2>
+            <p class="mb-3">Demonstrating different button states and styles from the theme map:</p>
+            <button class="btn btn-primary">Primary Button</button>
+            <a href="#" class="btn btn-secondary">Secondary Link</a>
+            <button class="btn btn-danger">Danger Action</button>
+            <button class="btn btn-success">Success Confirmation</button>
+            <button class="btn btn-info">Info Action</button>
+        </section>
+
+        <section class="mb-5">
+            <h2>Forms and Inputs</h2>
+            <form>
+                <label for="text-input">Text Input</label>
+                <input type="text" id="text-input" placeholder="Enter text here">
+
+                <label for="select-input">Select Dropdown</label>
+                <select id="select-input">
+                    <option>Select an option...</option>
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                </select>
+
+                <label for="textarea-input">Message</label>
+                <textarea id="textarea-input" rows="4" placeholder="Enter comments..."></textarea>
+                
+                <button type="submit" class="btn-primary">Submit</button> 
+            </form>
+        </section>
+
+        <section class="mb-5">
+            <h2>Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item ID</th>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1001</td>
+                        <td>Pumpkin Lantern</td>
+                        <td>$45.00</td>
+                        <td><span class="text-success fw-bold">In Stock</span></td>
+                    </tr>
+                    <tr>
+                        <td>1002</td>
+                        <td>Chocolate Latte</td>
+                        <td>$15.00</td>
+                        <td><span class="text-danger fw-bold">Out of Stock</span></td>
+                    </tr>
+                    <tr>
+                        <td>1003</td>
+                        <td>Fall Ornament</td>
+                        <td>$8.50</td>
+                        <td><span class="text-primary fw-bold">Low Stock</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="mb-5">
+            <h2>Links</h2>
+            <a href="#">Internal Link (learn More)</a>
+            <a href="https://google.com" target="_blank">External Link (Opens in New Tab)</a>
+        </section>
+        
+        <section class="mb-5">
+            <h2>Color Utilities</h2>
+            <div class="d-flex" style="display:flex; gap: 10px;">
+                <div class="bg-primary p-4" style="height:100px; width:100px; display:flex; align-items: center; justify-content: center;" >
+                    <p class="text-dark fs-xs m-0">.bg-primary</p>
+                </div>
+                <div class="bg-secondary p-4" style="height:100px; width:100px; display:flex; align-items: center; justify-content: center;" >
+                    <p class="text-dark fs-xs m-0">.bg-secondary</p>
+                </div>
+                <div class="bg-danger p-4" style="height:100px; width:100px; display:flex; align-items: center; justify-content: center;" >
+                    <p class="text-light fs-xs m-0">.bg-danger</p>
+                </div>
+                <div class="bg-success p-4" style="height:100px; width:100px; display:flex; align-items: center; justify-content: center;" >
+                    <p class="text-light fs-xs m-0">.bg-success</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2>Typography, Spacing, & Borders</h2>
+            <div class="bg-light p-4 mb-4 border border-2 border-primary rounded-lg">
+                <p class="fs-xl fw-extra-bold text-dark m-0">Bonfire Utilities Demo</p>
+                <p class="fs-sm fw-light mt-2 mb-0">This paragraph uses: <span class="fw-bold">.fs-sm</span>, <span class="fw-bold">.fw-light</span>, <span class="fw-bold">.mt-2</span>, and <span class="fw-bold">.mb-0</span>.</p>
+                <p class="p-3 bg-secondary rounded text-dark fs-md m-0">This inner box uses <span class="fw-bold">.p-3</span> and <span class="fw-bold">.bg-secondary</span>.</p>
+            </div>
+            
+            <p class="text-primary fw-bold">.text-primary</p>
+            <p class="text-secondary fw-normal">.text-secondary</p>
+            <p class="text-danger fw-light">.text-danger</p>
+        </section>
+
+        <section class="mb-5">
+            <h2>Images</h2>
+            <div style="display:flex; gap: 20px;">
+                <div>
+                    <img class="img-thumbnail" src="https://placehold.co/300x300?text=Thumbnail" alt="Thumbnail style" />
+                    <p class="text-dark fs-sm mt-2">.img-thumbnail</p>
+                </div>
+                <div>
+                    <img class="img-avatar" src="https://placehold.co/300x300?text=Avatar" alt="Avatar style" />
+                    <p class="text-dark fs-sm mt-2">.img-avatar (Rounded)</p>
+                </div>
+                <div>
+                    <img class="img-round" src="https://placehold.co/300x300?text=Round" alt="Round style" />
+                    <p class="text-dark fs-sm mt-2">.img-round (Rounded)</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>

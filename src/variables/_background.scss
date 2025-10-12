@@ -1,0 +1,7 @@
+@use './theme' as theme;
+
+@each $name, $color in theme.$theme {
+    .bg-#{$name} {
+        background-color: #{$color} !important;
+    }
+}

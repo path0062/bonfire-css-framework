@@ -1,0 +1,10 @@
+@use './theme' as theme;
+
+$font-family-body: var(--font-family-body);
+$font-family-heading: var(--font-family-heading);
+
+@each $name, $color in theme.$theme {
+    .text-#{$name} {
+        color: #{$color} !important; 
+    }
+}

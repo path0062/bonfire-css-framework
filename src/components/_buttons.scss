@@ -1,0 +1,40 @@
+@use '../variables/theme' as theme;
+@use '../variables/sizing' as sizing;
+
+.btn, button {
+    display: inline-block;
+    padding: map-get(sizing.$spacers, 2) map-get(sizing.$spacers, 3);
+    border: 1px solid transparent;
+    border-radius: sizing.$border-radius-base;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 1.5;
+    font-weight: var(--font-weight-bold);
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
+    user-select: none;
+    margin: map-get(sizing.$spacers, 1);
+    
+    @extend .btn-primary; 
+}
+
+@each $name, $color in theme.$theme {
+    .btn-#{$name} {
+        color: if($name == light or $name == secondary or $name == success, var(--color-dark), var(--color-light)); 
+        background-color: #{$color};
+        border-color: #{$color};
+
+        &:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+        &:active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+} 
+
+button[type="submit"] {
+    @extend .btn-primary;
+}

@@ -1,0 +1,22 @@
+// src/utilities/_fonts.scss
+
+// Font Weight Utilities
+.fw-light { font-weight: var(--font-weight-light) !important; }
+.fw-normal { font-weight: var(--font-weight-normal) !important; }
+.fw-bold { font-weight: var(--font-weight-bold) !important; }
+
+// Font Size Utilities (Example scale)
+$font-sizes: (
+    xs: 0.75rem,
+    sm: 0.875rem,
+    md: 1rem,
+    lg: 1.25rem,
+    xl: 1.5rem,
+    xxl: 2rem
+);
+
+@each $key, $size in $font-sizes {
+    .fs-#{$key} {
+        font-size: #{$size} !important;
+    }
+}

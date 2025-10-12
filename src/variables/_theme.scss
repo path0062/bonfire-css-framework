@@ -1,0 +1,30 @@
+@use './colors' as colors;
+
+$theme: (
+    primary: colors.$pumpkin-orange,
+    secondary: colors.$bright-yellow,
+    danger: colors.$cranberry-red,
+    success: colors.$olive,
+    info: colors.$deep-charcoal,
+    dark: colors.$deep-charcoal,
+    light: colors.$cream-white,
+);
+
+:root {
+    --color-primary: #{map-get($theme, primary)};
+    --color-secondary: #{map-get($theme, secondary)};
+    --color-danger: #{map-get($theme, danger)};
+    --color-success: #{map-get($theme, success)};
+    --color-info: #{map-get($theme, info)};
+    --color-dark: #{map-get($theme, dark)};
+    --color-light: #{map-get($theme, light)};
+
+    --font-family-body: "Merriweather", serif;
+    --font-family-heading: "Merriweather", serif;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+    --font-weight-extra-bold: 900;
+
+    --container-max-width: 1200px;
+}

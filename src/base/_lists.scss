@@ -1,0 +1,18 @@
+// src/base/_lists.scss
+
+@use '../variables/sizing' as sizing;
+
+ul, ol {
+    margin-left: map-get(sizing.$spacers, 4);
+    margin-bottom: map-get(sizing.$spacers, 3);
+
+    li {
+        margin-bottom: map-get(sizing.$spacers, 1);
+        padding-left: map-get(sizing.$spacers, 1);
+        
+        // Custom bullet for unordered list (Bonfire theme: a warm block)
+        &::marker {
+            color: var(--color-secondary);
+        }
+    }
+}

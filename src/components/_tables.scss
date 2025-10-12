@@ -1,0 +1,36 @@
+@use '../variables/theme' as theme;
+@use '../variables/sizing' as sizing;
+
+table {
+    width: 100%;
+    margin-bottom: map-get(sizing.$spacers, 4);
+    color: var(--color-dark);
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: map-get(sizing.$spacers, 2) map-get(sizing.$spacers, 3);
+    border: 1px solid rgba(var(--color-dark), 0.2);
+    text-align: left;
+}
+
+thead {
+    th { 
+        color: var(--color-light); 
+        background-color: var(--color-dark);
+        border-bottom: 3px solid var(--color-primary);  
+        font-weight: var(--font-weight-bold);
+    }
+}
+
+tbody {
+    tr {
+        transition: background-color 0.15s;
+        &:nth-of-type(odd) {
+            background-color: rgba(var(--color-dark), 0.05); 
+        }
+        &:hover {
+             background-color: rgba(var(--color-secondary), 0.2); 
+        }
+    }
+}

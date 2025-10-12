@@ -1,0 +1,31 @@
+// src/components/_forms.scss
+
+@use '../variables/theme' as theme;
+@use '../variables/sizing' as sizing;
+
+input:not([type="checkbox"]):not([type="radio"]),
+textarea,
+select {
+    display: block;
+    width: 100%;
+    padding: map-get(sizing.$spacers, 2);
+    margin-bottom: map-get(sizing.$spacers, 3);
+    line-height: 1.5;
+    background-color: var(--color-light);
+    border: 1px solid var(--color-dark);
+    border-radius: sizing.$border-radius-base;
+    color: var(--color-dark);
+    transition: border-color 0.2s, box-shadow 0.2s;
+
+    &:focus {
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 0.25rem rgba(map-get(theme.$theme, primary), 0.25);
+    }
+}
+
+label {
+    display: inline-block;
+    margin-bottom: map-get(sizing.$spacers, 1);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-dark);
+}
